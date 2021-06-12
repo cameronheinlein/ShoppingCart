@@ -1,5 +1,16 @@
 import React from "react";
 import axios from 'axios';
+import * as ReactBootstrap from 'react-bootstrap';
+import {
+  Card,
+  Accordion,
+  Button,
+  Container,
+  Row,
+  Col,
+  Image,
+  Input,
+} from 'react-bootstrap';
 
 // sumulate getting products from DataBase
 const products = [
@@ -9,13 +20,13 @@ const products = [
     { name: "Cabbage:", country: "USA", cost: 1, instock: 8 },
   ];
   //=========Cart=============
-  const Cart = (props) => {
+  /*const Cart = (props) => {
     const { Card, Accordion, Button } = ReactBootstrap;
     let data = props.location.data ? props.location.data : products;
     console.log(`data:${JSON.stringify(data)}`);
   
     return <Accordion defaultActiveKey="0">{list}</Accordion>;
-  };
+  };*/
   
   const useDataApi = (initialUrl, initialData) => {
     const { useState, useEffect, useReducer } = React;
@@ -81,16 +92,6 @@ const products = [
     const [items, setItems] = React.useState(products);
     const [cart, setCart] = React.useState([]);
     const [total, setTotal] = React.useState(0);
-    const {
-      Card,
-      Accordion,
-      Button,
-      Container,
-      Row,
-      Col,
-      Image,
-      Input,
-    } = ReactBootstrap;
     
     //  Fetch Data
     const { Fragment, useState, useEffect, useReducer } = React;
